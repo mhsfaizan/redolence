@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<?php require("include/head.html"); ?>
+<body data-ng-app="myApp">
+	<main class="bg-body" data-ng-controller="homeController">
+		<?php require("include/nav.html"); ?>
+		<!-- Set up your HTML -->
+		<section id="carous">
+			<div class="owl-carousel owl-one my-font-family">
+			  <div ng-repeat="gallery in galleries|limitTo:3" class="item">
+			  	<h1>{{gallery.title}}</h1>
+			  	<img ng-src="gallery/{{gallery.images}}">
+			  </div>
+			 <!--  <div>
+			  	<h1>overlay1</h1>
+			  	<img src="gallery/banner1.jpeg">
+			  </div>
+			  <div>
+			  	<h1>overlay2</h1>
+			  	<img src="gallery/banner1.jpeg">
+			  </div> -->
+			</div>
+		</section>
+		<section id="about-service-gallrry">
+			<div class="container">
+				<section id="about" class="section-bg">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<h1 class="my-font-family">About us</h1>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p class="float-right"><a href="#">Read More</a></p>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<iframe width="100%" height="345" src="https://www.youtube.com/embed/sydYfIch_7E">
+							</iframe>
+						</div>
+					</div>
+				</section>
+				<section id="service" class="mt-5">
+					<h1 class="my-font-family">Our Service</h1>
+					<div class="row mt-4">
+						<div class="col-md-3 col-sm-6 text-center">
+							<a href="#" class="hover-effect">
+								<img src="gallery/banner1.jpeg">
+								<div class="layer"></div>
+								<span>service</span>
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center">
+							<a href="#" class="hover-effect">
+								<img src="gallery/banner1.jpeg">
+								<div class="layer"></div>
+								<span>service</span>
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center">
+							<a href="#" class="hover-effect">
+								<img src="gallery/banner1.jpeg">
+								<div class="layer"></div>
+								<span>service</span>
+							</a>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center">
+							<a href="#" class="hover-effect">
+								<img src="gallery/banner1.jpeg">
+								<div class="layer"></div>
+								<span>service</span>
+							</a>
+						</div>
+						<div class="service-bottom-text">
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.</p>
+						</div>
+					</div>
+				</section>
+				<section id="gallery" class="section-bg">
+					<h1 class="my-font-family">Gallery</h1>
+					<div class="row mt-4">
+						<div class="col-md-6 col-sm-12" ng-repeat="gallery in galleries|limitTo:2">
+							<a href="gallery/{{gallery.images}}" class="gallery-img" data-lightbox="gallery-img">
+								<img ng-src="gallery/{{gallery.images}}" class="img-fluid">
+								<div class="layer"></div>
+								<span>{{gallery.title}}</span>
+							</a>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-md-4 col-sm-12" ng-repeat="gallery in galleries|limitTo:3:2">
+							<a href="gallery/{{gallery.images}}" class="gallery-img" data-lightbox="gallery-img">
+								<img ng-src="gallery/{{gallery.images}}" class="img-fluid">
+								<div class="layer"></div>
+								<span>{{gallery.title}}</span>
+							</a>
+						</div>
+						
+					</div>
+					<div class="pull-right">
+						<a href="gallery.html" class="btn btn-primary"> Read More</a>
+					</div>
+					<div class="clearfix"></div>
+				</section>
+			</div>
+		</section>
+		<section id="testnomials" class="mt-5">
+			<h1 class="my-font-family ml-2">Testnomials</h1>
+			<div class="testnomials">
+				<div class="owl-carousel owl-two container">
+				    <div class="testnomi">
+					  	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					  	<p><b>client Name</b></p>
+					</div>
+					<div class="testnomi">
+					  	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					  	<p><b>client Name</b></p>
+					</div>
+					<div class="testnomi">
+					  	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					  	<p><b>client Name</b></p>
+					 </div>
+				</div>
+			</div>
+		</section>
+	</main>
+<?php require("include/footer.html"); ?>

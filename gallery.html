@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<?php require("include/head.html"); ?>
+<body data-ng-app="myApp">
+	<main class="bg-body" data-ng-controller="homeController">
+		<?php require("include/nav.html"); ?>
+		<div class="about-main-page">
+			<h1 class="my-font-family">Gallery</h1>
+		</div>
+		<section id="main-image-bottom">
+			<div>
+				<ol class="breadcrumb mb-0">
+				  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				  <li class="breadcrumb-item active">Gallery</li>
+				</ol>
+			</div>
+			<section id="about-content" class="section-bg">
+				<div class="gallery">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4" ng-repeat="gallery in galleries">
+								<a class="mb-4 gallery-image" href="gallery/{{gallery.images}}" data-lightbox="gal-img">
+									<img ng-src="gallery/{{gallery.images}}" class="img-fluid">
+								</a>
+								<b>{{gallery.title}}</b>
+								<p>{{gallery.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+    </main>
+<?php require("include/footer.html"); ?>

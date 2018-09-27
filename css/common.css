@@ -1,0 +1,32 @@
+body{
+	font-family: 'Lora', serif!important;
+}
+.bg-body{
+	background-image: url("../img/body-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.my-font-family{
+	font-family:'Conv_Signature of the Ancient',Sans-Serif;
+	font-size: 3rem;
+}
+.section-bg{
+	background: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.margin{
+	width: 60%;
+	margin:0 auto;
+}
+#our-team .card{
+	overflow: hidden;
+}
+#our-team .card img{	
+	transition: all .5s linear;
+	cursor: pointer;
+}
+#our-team .card:hover img{	
+	filter: grayscale(100%);
+}

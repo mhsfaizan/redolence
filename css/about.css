@@ -1,0 +1,40 @@
+.about-main-page{
+	background-image: url(../gallery/banner1.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;
+}
+.about-main-page:after{
+	content:"";
+	position: absolute;
+	width: 100%;
+	min-height:inherit;
+	background-color:rgba(0,0,0,.5);  
+	z-index: 0;
+}
+.about-main-page h1{
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+}
+/*gallery*/
+.gallery{
+	margin-top: 1rem;
+}
+.gallery-image{
+	display: flex;
+	height: 200px;
+	width: 100%;
+	overflow: hidden;
+	align-items: center;
+}
+.gallery-image img{
+	transition: all .4s linear;
+}
+.gallery-image:hover img{
+	transform: rotate(7deg) scale(1.5,1.5);
+}
